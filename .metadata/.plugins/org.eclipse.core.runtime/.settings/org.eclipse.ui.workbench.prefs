@@ -10,6 +10,7 @@ HYPERLINK_COLOR=111,197,238
 INCOMING_COLOR=31,179,235
 OUTGOING_COLOR=238,238,238
 RESOLVED_COLOR=108,210,17
+UIActivities.org.eclipse.cdt.debug.dsfgdbActivity=true
 eclipse.preferences.version=1
 org.eclipse.cdt.ui.ColoredLabels.writeaccess_highlight=255,128,128
 org.eclipse.cdt.ui.outline.mark.dividercolor=80,80,80

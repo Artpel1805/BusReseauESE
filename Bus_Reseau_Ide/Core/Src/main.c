@@ -97,7 +97,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    printf('Test \n \r')
+    printf("Test \n \r");
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

@@ -201,3 +201,9 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/arthu
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-10-19 09:05:33.425
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2022-10-19 09:06:28.096
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2022-10-19 09:06:47.732
+!MESSAGE Won't launch debug session since we failed to locate the binary.
