@@ -2,7 +2,7 @@
 ## Capteur BMP280
 Les adresses I²C possibles pour ce composant: 1110110 (0X76) ou 1110111 (0x77) ca depend de la connection de SDO
 
-Le registre et la valeur permettant d'identifier ce composant: le registre ID  0x58.
+Le registre et la valeur permettant d'identifier ce composant: le registre ID  0xDO et sa valeur est 0x58.
 
 le registre et la valeur permettant de placer le composant en mode normal : control register et la valeur 11
 
