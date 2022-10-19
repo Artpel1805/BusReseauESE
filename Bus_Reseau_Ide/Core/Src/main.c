@@ -24,7 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "bmp280.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -90,6 +90,7 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -97,8 +98,14 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    printf("Test \n \r");
+
     /* USER CODE BEGIN 3 */
+	  int isInited = init_bmp280();
+	  if(isInited == 1){
+		  printf("BMP280 Succefully Inited");
+	  }
+	  HAL_Delay(1000);
+
   }
   /* USER CODE END 3 */
 }
