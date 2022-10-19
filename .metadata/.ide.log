@@ -857,3 +857,113 @@
 2022-10-19 08:48:39,663 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 4084mS.
 2022-10-19 08:48:39,663 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
 2022-10-19 08:48:39,665 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 08:49:45,113 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,113 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,199 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,199 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,200 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,200 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,245 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,246 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,246 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,246 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,290 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,291 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,291 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,291 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,365 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,365 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,370 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,371 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,378 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:45,379 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,530 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,530 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,678 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,679 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,681 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,681 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,739 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,739 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,746 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,747 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,883 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,883 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,884 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,884 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,929 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,929 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,971 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:48,971 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:49,029 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:49,030 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:49,034 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:49,034 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,547 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,548 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,648 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,648 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,649 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,649 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,708 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,708 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,713 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,714 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,822 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,822 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,823 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,823 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,863 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,863 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,903 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,904 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,947 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,947 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,950 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:51,950 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:55,320 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 505481648 Bytes (1013972992)
+2022-10-19 08:49:56,870 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 546396256 Bytes (1013972992)
+2022-10-19 08:49:57,182 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 571582264 Bytes (1013972992)
+2022-10-19 08:49:57,658 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 08:49:57,659 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: I2C
+2022-10-19 08:49:57,659 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 08:49:57,659 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: USART
+2022-10-19 08:49:57,659 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 08:49:57,660 [INFO] CodeGenerator:690 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.6.1.202207061420//db/
+2022-10-19 08:49:57,664 [WARN] IP:2111 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:57,665 [WARN] IP:2111 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2022-10-19 08:49:57,999 [INFO] CodeEngine:245 - oldGeneratedFile, /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/MXTmpFiles/license.tmp_save
+2022-10-19 08:49:58,182 [INFO] CodeEngine:269 - Generated code: /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/MXTmpFiles/license.tmp
+2022-10-19 08:49:58,211 [INFO] CodeEngine:245 - oldGeneratedFile, /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Src/gpio.c_save
+2022-10-19 08:49:58,419 [INFO] CodeEngine:269 - Generated code: /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Src/gpio.c
+2022-10-19 08:49:58,423 [INFO] CodeEngine:245 - oldGeneratedFile, /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Inc/gpio.h_save
+2022-10-19 08:49:58,577 [INFO] CodeEngine:269 - Generated code: /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Inc/gpio.h
+2022-10-19 08:49:58,790 [INFO] CodeEngine:245 - oldGeneratedFile, /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Src/i2c.c_save
+2022-10-19 08:49:58,962 [INFO] CodeEngine:269 - Generated code: /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Src/i2c.c
+2022-10-19 08:49:58,966 [INFO] CodeEngine:245 - oldGeneratedFile, /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Inc/i2c.h_save
+2022-10-19 08:49:59,127 [INFO] CodeEngine:269 - Generated code: /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Inc/i2c.h
+2022-10-19 08:49:59,132 [INFO] CodeEngine:245 - oldGeneratedFile, /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Src/usart.c_save
+2022-10-19 08:49:59,294 [INFO] CodeEngine:269 - Generated code: /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Src/usart.c
+2022-10-19 08:49:59,296 [INFO] CodeEngine:245 - oldGeneratedFile, /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Inc/usart.h_save
+2022-10-19 08:49:59,399 [INFO] CodeEngine:269 - Generated code: /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Inc/usart.h
+2022-10-19 08:49:59,406 [INFO] CodeEngine:245 - oldGeneratedFile, /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Src/stm32f4xx_it.c_save
+2022-10-19 08:49:59,546 [INFO] CodeEngine:269 - Generated code: /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Src/stm32f4xx_it.c
+2022-10-19 08:49:59,550 [INFO] CodeEngine:245 - oldGeneratedFile, /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Inc/stm32f4xx_it.h_save
+2022-10-19 08:49:59,671 [INFO] CodeEngine:269 - Generated code: /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Inc/stm32f4xx_it.h
+2022-10-19 08:49:59,690 [INFO] CodeEngine:245 - oldGeneratedFile, /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Src/stm32f4xx_hal_msp.c_save
+2022-10-19 08:49:59,838 [INFO] CodeEngine:269 - Generated code: /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Src/stm32f4xx_hal_msp.c
+2022-10-19 08:49:59,841 [INFO] CodeEngine:245 - oldGeneratedFile, /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/MXTmpFiles/system.tmp_save
+2022-10-19 08:49:59,948 [INFO] CodeEngine:269 - Generated code: /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/MXTmpFiles/system.tmp
+2022-10-19 08:49:59,955 [INFO] CodeEngine:245 - oldGeneratedFile, /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Inc/stm32f4xx_hal_conf.h_save
+2022-10-19 08:50:00,094 [INFO] CodeEngine:269 - Generated code: /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Inc/stm32f4xx_hal_conf.h
+2022-10-19 08:50:00,145 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 08:50:00,160 [INFO] CodeEngine:245 - oldGeneratedFile, /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Inc/main.h_save
+2022-10-19 08:50:00,252 [INFO] CodeEngine:269 - Generated code: /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Inc/main.h
+2022-10-19 08:50:00,256 [INFO] CodeEngine:245 - oldGeneratedFile, /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Src/main.c_save
+2022-10-19 08:50:00,385 [INFO] CodeEngine:269 - Generated code: /Users/arthurpellegrin/Desktop/ESE/Bus_Reseau/BusReseauESE/Bus_Reseau_Ide/Core/Src/main.c
+2022-10-19 08:50:01,530 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 238mS.
+2022-10-19 08:50:01,534 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 08:50:02,011 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 08:50:04,790 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 3256mS.
+2022-10-19 08:50:04,791 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 08:50:04,792 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
