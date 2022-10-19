@@ -14,3 +14,8 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/arthu
 
 !ENTRY org.eclipse.cdt.core 1 0 2022-10-19 08:46:37.134
 !MESSAGE Indexed 'Bus_Reseau_Ide' (19 sources, 81 headers) in 6.74 sec: 4,517 declarations; 21,854 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0076%)
+
+!ENTRY org.eclipse.core.resources 2 2 2022-10-19 08:50:57.381
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2022-10-19 08:50:57.381
+!MESSAGE The project description file (.project) for 'Bus_Reseau_Ide' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
