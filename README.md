@@ -1,4 +1,4 @@
-# BusReseauESE
+# <div align="center">Thermostat Domotique</div>
 
 ## Contexte
 
