@@ -1,25 +1,45 @@
-# BusReseauESE
-## Capteur BMP280
-Les adresses I²C possibles pour ce composant: 1110110 (0X76) ou 1110111 (0x77) ca depend de la connection de SDO
+# <div align="center">Thermostat Domotique</div>
 
-Le registre et la valeur permettant d'identifier ce composant: le registre ID  0x58.
+## Contexte
 
-le registre et la valeur permettant de placer le composant en mode normal : control register et la valeur 11
+Le but de ce TP est de comprendre comment utiliser des communications réseaux (API REST), ainsi que des communications via bus (I2C, UART, etc...).
 
-Le registres contenant l'étalonnage du composant: 0xF4
+Nous allons pour cela prototyper une application domotique de gestion de chauffage.
 
-Les registres contenant la température (ainsi que le format): 0xFA 0xFB 0xFC
-
-Les registres contenant la pression (ainsi que le format): 0xF7 0xF8 0xF9
-
-Les fonctions permettant le calcul de la température et de la pression compensées, en
-format entier 32 bits: 
--BMP280_S32_t  bmp280_compensate_T_int32(BMP280_S32_t adc_T)
--BMP280_U32_t  bmp280_compensate_P_int64(BMP280_S32_t adc_P)
+Nous nous occuperons de la partie réseau, capteur et asservissement moteur. 
 
 
-## Setup du STM32
-
-## Communication I²C 
+On pourrait très bien imaginer rajouter une UI pour communiquer avec notre serveur, ainsi qu'une vanne commandée par le moteur pour régler l'intensité du chauffage.
 
 
+## Capteurs
+
+
+
+## Asservissement Moteur
+
+
+
+## Réseau
+
+### Serveur
+
+Pour la partie Réseau nous utiliserons une Raspberry Pi. Celle-ci dispose d'une carte réseau et après une configuration nous la connectons sur un réseau local.
+
+Nous allons créer un serveur sur cette carte electronique.
+Le serveur va nous permettre de manipuler de la donnée et d'executer des ordres via un protocole de communication sans fil.
+Plus précisement une API REST. Nous utiliserons le protocole de communication HTTP pour communiquer avec notre serveur.
+
+### HTTP
+Le protocole HTTP normalisé de couche 7 dans le modèle OSI. Il utilise un protocole TCP en couche 4.
+
+HTTP est principalement caractérisé par **_les verbes_** qui permettent d'effectuer des actions spécifiques sur la donnée. On peut par exemple citer: 
+- GET pour récuperer de la donnée
+- POST pour créer de la donnée
+- DELETE pour supprimer de la donnée
+
+### Flask
+
+### Connection avec la STM32
+
+### [BONUS] Fast API
