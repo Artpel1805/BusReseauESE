@@ -105,4 +105,15 @@ Nous choisissons de communiquer via un **_BUS UART_**.
 
 La Raspberry Pi va donc envoyer des ordres ("Chaines de caractère") à notre STM lors de la reception de commande HTTP et la STM va ainsi pouvoir nous répondre en UART en nous communiquant les données du capteurs ou du moteur. Ensuite nous allons pouvoir les renvoyer via HTTP à l'auteur de la requête.
 
+Le packaque PySerial de Python permet d'utiliser les ports Séries de notre carte.
+
+On l'installe donc via pip en l'ajoutant à notre fichier [requirement.txt](API/requirement.txt)
+
+On voit que le port UART de la Raspberry Pi s'appelle **_ttyAMA0_**.
+<a>https://github.com/Artpel1805/BusReseauESE/blob/38bcaade74b0e8bcc69c58af9c7d3fbd5ee3f309/API/uart.py#L3-L4</a>
+
+Lors de la réception d'une requête on va donc envoyer un ordre à la STM32 et attendre sa réponse :
+
+<a>https://github.com/Artpel1805/BusReseauESE/blob/38bcaade74b0e8bcc69c58af9c7d3fbd5ee3f309/API/uart.py#L6-L12<a>
+
 ### [BONUS] Fast API
