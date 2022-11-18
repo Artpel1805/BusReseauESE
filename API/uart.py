@@ -29,7 +29,7 @@ def fetch_scale():
 
 def update_scale(x: int):
     try:
-        ser.write("SET_K")
+        ser.write(b"SET_K")
         ser.write("=" + str(x))
         return x
     except Exception as e:
@@ -37,7 +37,7 @@ def update_scale(x: int):
 
 def fetch_angle():
     try: 
-        ser.write("GET_A")
+        ser.write(b"GET_A")
         scale = ser.read(4)
         return scale
     except Exception as e :
