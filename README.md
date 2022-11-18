@@ -44,7 +44,13 @@ HTTP est principalement caractérisé par **_les verbes_** qui permettent d'effe
 
 ### Flask
 
-Après avoir installé Raspberry Pi OS : <a> https://www.raspberrypi.org/downloads/raspberry-pi-os/</a>
+Après avoir installé Raspberry Pi OS Lite 32 Bit: <a>https://www.raspberrypi.org/downloads/raspberry-pi-os/</a>
+
+Nous configurons et connectons notre carte à notre réseau.
+
+La Raspberry communique via **_ssh_**, un protocole de communication permetant de se connecter à distance à un ordinateur et d'obtenir un shell. C'est grâce à ce shell que nous allons pouvoir interagir avec l'os.
+
+On peut chercher notre Raspberry sur le réseau avec la commande `arp -a`
 
 ### Connection avec la STM32
 
