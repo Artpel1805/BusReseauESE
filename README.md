@@ -53,6 +53,8 @@ Les cartes STM32L476 sont équipées d'un contrôleur CAN intégré.Pour pouvoir
 Pour pouvoir utliser le bus Can on utilise deux primitives HAL HAL_StatusTypeDef HAL_CAN_Start (CAN_HandleTypeDef * hcan) pour pour activer le module CAN etHAL_StatusTypeDef HAL_CAN_AddTxMessage (CAN_HandleTypeDef * hcan, CAN_TxHeaderTypeDef * pHeader, uint8_t aData[], uint32_t * pTxMailbox) pour envoyer un message.
 Tout d'abord nous allons commencer par créer une structure pour envoyer notre message ID en standart . Et en choisisant d'envoyer 2 bits pour utilise la function Angle fournin par la DataSheet qui permet de choisir l'angle et le sens désiré . Puis nous référant la position atteinte comme position initiale pour pouvoir continuer de tourner .
 
+<a>https://github.com/Artpel1805/BusReseauESE/blob/fc92a518d5c38a0820adb6c871b40ebab13722cf/CUBEIDE/Core/Src/main.c#L257-L274</a>
+
 
 ## Réseau
 
