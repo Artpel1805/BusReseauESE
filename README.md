@@ -72,6 +72,14 @@ Une bonne pratique est de lister toutes les dépendances python dans un fichier.
 
 Il ne nous reste plus qu'a executer la commande `python3 -m pip install -r requirement.txt`
 
+Nous avons donc installer Flask. Nous pouvons maintenant commencer à coder notre serveur !
+
+Pour construire une route avec Flask il faut lui indiquer : 
+- Le Path
+- Les verbes autorisés
+- Le/Les arguments et leur type (Body/Query/Path Parameter)
+- La logique
+
 ### Connection avec la STM32
 
 ### [BONUS] Fast API
