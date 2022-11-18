@@ -14,9 +14,7 @@ On pourrait très bien imaginer rajouter une UI pour communiquer avec notre serv
 ![img](assets/Schemas_Global.png)
 
 
-## Capteurs
-
-### BMP280
+## Capteurs BMP280
 
 Le BMP280 est un capteur de pression et température développé par Bosch , la première chose
 à faire c’est que nous allons bien lire la datasheet de ce capteur et extraire toute les informations
@@ -34,10 +32,26 @@ format entier 32 bits:
 <a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L167</a>
 <a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L154</a>
 
+### Identification
 
+Pour pouvoir identifier le BMP280 il fallait envoyer par à l’adresse I²C du capteur, l’adresse du registre ID pour pouvoir recevoir le contenu de ce registre .
+
+<a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L37-L43</a>
+
+On recoit à la fin 0x58 ce qui correpond à la valeur attendu et  on utilise UART pour vérifier si la communication I2C est bien passée.
+
+### Configuration du BMP280
+
+ Nous allons utiliser la configuration suivante: mode normal, Pressure oversampling x16, Temperature oversampling x2.
+Pour cela on envoie l'adresse du registre à écrire 0xF4 suivi de la valeur des paramètres et pour cela on fait un déclage de bits et on verifie cela à la fin .
+
+<a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L58-L64</a>
 
 ## Asservissement Moteur
 
+Les cartes STM32L476 sont équipées d'un contrôleur CAN intégré.Pour pouvoir les utiliser, il faut leur adjoindre un Tranceiver CAN.Le bus CAN pour piloter un module moteur pas-à-pas. Ce module s'alimente en +12V. La carte moteur tolére une vitesse CAN de 500kbit/s.
+Pour pouvoir utliser le bus Can on utilise deux primitives HAL HAL_StatusTypeDef HAL_CAN_Start (CAN_HandleTypeDef * hcan) pour pour activer le module CAN etHAL_StatusTypeDef HAL_CAN_AddTxMessage (CAN_HandleTypeDef * hcan, CAN_TxHeaderTypeDef * pHeader, uint8_t aData[], uint32_t * pTxMailbox) pour envoyer un message.
+Tout d'abord nous allons commencer par créer une structure pour envoyer notre message ID en standart . Et en choisisant d'envoyer 2 bits pour utilise la function Angle fournin par la DataSheet qui permet de choisir l'angle et le sens désiré . Puis nous référant la position atteinte comme position initiale pour pouvoir continuer de tourner .
 
 
 ## Réseau
