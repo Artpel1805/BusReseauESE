@@ -50,7 +50,9 @@ Nous configurons et connectons notre carte à notre réseau.
 
 La Raspberry communique via **_ssh_**, un protocole de communication permetant de se connecter à distance à un ordinateur et d'obtenir un shell. C'est grâce à ce shell que nous allons pouvoir interagir avec l'os.
 
-On peut chercher notre Raspberry sur le réseau avec la commande `arp -a`
+On peut chercher notre Raspberry sur le réseau avec la commande  `arp -a`
+
+On se connecte ensuite via la commande `ssh pi@<ip_adresse>`
 
 ### Connection avec la STM32
 
