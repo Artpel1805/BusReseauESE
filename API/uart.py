@@ -29,7 +29,8 @@ def fetch_scale():
 
 def update_scale(x: int):
     try:
-        ser.write("SET_K=" + str(x))
+        ser.write("SET_K")
+        ser.write("=" + str(x))
         return x
     except Exception as e:
         return e
