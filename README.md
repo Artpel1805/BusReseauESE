@@ -1,4 +1,16 @@
 # BusReseauESE
+
+## Contexte
+
+Le but de ce TP est de comprendre comment utiliser des communications réseaux (API REST), ainsi que des communications via bus (I2C, UART, etc...).
+
+Nous allons pour cela prototyper une application domotique de gestion de chauffage.
+
+Nous nous occuperons de la partie réseau, capteur et asservissement moteur. 
+
+On pourrait très bien imaginer rajouter une UI pour communiquer avec notre serveur, ainsi qu'une vanne commandée par le moteur pour régler l'intensité du chauffage.
+
+
 ## Capteur BMP280
 Les adresses I²C possibles pour ce composant: 1110110 (0X76) ou 1110111 (0x77) ca depend de la connection de SDO
 
