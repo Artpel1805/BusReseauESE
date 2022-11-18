@@ -8,6 +8,7 @@ Nous allons pour cela prototyper une application domotique de gestion de chauffa
 
 Nous nous occuperons de la partie réseau, capteur et asservissement moteur. 
 
+
 On pourrait très bien imaginer rajouter une UI pour communiquer avec notre serveur, ainsi qu'une vanne commandée par le moteur pour régler l'intensité du chauffage.
 
 
@@ -31,6 +32,7 @@ Plus précisement une API REST. Nous utiliserons le protocole de communication H
 
 ### HTTP
 Le protocole HTTP normalisé de couche 7 dans le modèle OSI. Il utilise un protocole TCP en couche 4.
+
 HTTP est principalement caractérisé par **_les verbes_** qui permettent d'effectuer des actions spécifiques sur la donnée. On peut par exemple citer: 
 - GET pour récuperer de la donnée
 - POST pour créer de la donnée
