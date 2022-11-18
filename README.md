@@ -86,7 +86,11 @@ Par exemple ici on voit que le path est "/temp", qu'il y a un Path Parameter "x"
 
 Lorsque le serveur reçoit cette instruction il va alors effectuer la fonction ci-dessous.
 
-<a>https://github.com/Artpel1805/BusReseauESE/blob/4fdf398de2d8c7afaafab55f690ca8cb664cafed/API/flask_api.py#L11-L18</a>
+<a>https://github.com/Artpel1805/BusReseauESE/blob/e33c806981fa3cc1ed17d72aeab58bacde361ed7/API/flask_api.py#L21-L27</a>
+
+Le serveur nous renvois ensuite une réponse constituée de :
+- La Data
+- Un code de Status : [Status Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
 ### Connection avec la STM32
 
