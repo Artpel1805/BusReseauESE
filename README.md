@@ -112,11 +112,15 @@ On l'installe donc via pip en l'ajoutant à notre fichier [requirement.txt](API/
 On voit que le port UART de la Raspberry Pi s'appelle **_ttyAMA0_**.
 <a>https://github.com/Artpel1805/BusReseauESE/blob/38bcaade74b0e8bcc69c58af9c7d3fbd5ee3f309/API/uart.py#L3-L4</a>
 
-Lors de la réception d'une requête on va donc envoyer un ordre à la STM32 et attendre sa réponse :
+Lors de la réception d'une requête on va donc envoyer un ordre à la STM32:
 
 <a>https://github.com/Artpel1805/BusReseauESE/blob/38bcaade74b0e8bcc69c58af9c7d3fbd5ee3f309/API/uart.py#L6-L12<a>
   
+Qui écoute son port UART via une interruption:
+<a>https://github.com/Artpel1805/BusReseauESE/blob/f824173ef8d4d0079d18baedc8db7d83de57e067/CUBEIDE/Core/Src/main.c#L191-L201</a>
+
 Vous pouvez retrouver l'ensemble des requêtes UART: [uart](API/uart.py)
+
 
 ### [BONUS] Fast API
 
