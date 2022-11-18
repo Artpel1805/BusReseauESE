@@ -42,7 +42,7 @@ HTTP est principalement caractérisé par **_les verbes_** qui permettent d'effe
 - POST pour créer de la donnée
 - DELETE pour supprimer de la donnée
 
-### Configuratoin de la Raspberry
+### Configuration de la Raspberry
 
 Après avoir installé Raspberry Pi OS Lite 32 Bit: <a>https://www.raspberrypi.org/downloads/raspberry-pi-os/</a>
 
@@ -68,8 +68,58 @@ Flask est un framework python permettant de coder assez simplement des API REST.
 
 Nous devons donc installer donc Flask via le gestionnaire de paquet de Python pip.
 
-Une bonne pratique est de lister toutes les dépendances python dans un fichier. Ainsi quelqu'un récupérant le projet ne devra executer qu'une seule commande pour tout installer : <a>api/requirement.txt</a>
+Une bonne pratique est de lister toutes les dépendances python dans un fichier. Ainsi quelqu'un récupérant le projet ne devra executer qu'une seule commande pour tout installer : [requirement.txt](API/requirement.txt)
+
+Il ne nous reste plus qu'a executer la commande `python3 -m pip install -r requirement.txt`
+
+Nous avons donc installer Flask. Nous pouvons maintenant commencer à coder notre serveur !
+
+Pour construire une route avec Flask il faut lui indiquer : 
+- Le Path
+- Les verbes autorisés
+- Le/Les arguments et leur type (Body/Query/Path Parameter)
+- La logique
+
+<a>https://github.com/Artpel1805/BusReseauESE/blob/5573b0998c37098095fd06447441d778647bf6d2/API/flask_api.py#L20</a>
+
+Par exemple ici on voit que le path est "/temp", qu'il y a un Path Parameter "x" et que la requête accepte les verbes POST et GET
+
+Lorsque le serveur reçoit une requête HTTP contenant ces informations il va alors effectuer la fonction ci-dessous.
+
+<a>https://github.com/Artpel1805/BusReseauESE/blob/e33c806981fa3cc1ed17d72aeab58bacde361ed7/API/flask_api.py#L21-L27</a>
+
+Le serveur nous renvois ensuite une réponse constituée de :
+- La Data
+- Un code de Status : [Status Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+La Réponse est aussi normalisée, elle est au format JSON, les Satuts code sont aussi noramlisés.
+
 
 ### Connection avec la STM32
 
+Nous avons vu comment communiquer avec notre Raspberry Pi grâce à Flask et l'envois de requêtes HTTP.
+
+Maintenant notre Raspberry Pi doit communiquer avec notre STM32 lors de la réception de requêtes HTTP.
+
+Nous choisissons de communiquer via un **_BUS UART_**.
+
+La Raspberry Pi va donc envoyer des ordres ("Chaines de caractère") à notre STM lors de la reception de commande HTTP et la STM va ainsi pouvoir nous répondre en UART en nous communiquant les données du capteurs ou du moteur. Ensuite nous allons pouvoir les renvoyer via HTTP à l'auteur de la requête.
+
+Le packaque PySerial de Python permet d'utiliser les ports Séries de notre carte.
+
+On l'installe donc via pip en l'ajoutant à notre fichier [requirement.txt](API/requirement.txt)
+
+On voit que le port UART de la Raspberry Pi s'appelle **_ttyAMA0_**.
+<a>https://github.com/Artpel1805/BusReseauESE/blob/38bcaade74b0e8bcc69c58af9c7d3fbd5ee3f309/API/uart.py#L3-L4</a>
+
+Lors de la réception d'une requête on va donc envoyer un ordre à la STM32 et attendre sa réponse :
+
+<a>https://github.com/Artpel1805/BusReseauESE/blob/38bcaade74b0e8bcc69c58af9c7d3fbd5ee3f309/API/uart.py#L6-L12<a>
+  
+Vous pouvez retrouver l'ensemble des requêtes UART: [uart](API/uart.py)
+
 ### [BONUS] Fast API
+
+FAST API est un framework python permettant de faire du serveur comme Flask. Il propose cependant une meilleure documentation et la communauté est très active ce qui est un paramètre non-négligeable. Deplus il permet une gestion plus facile et automatisée de l'erreur et du contrôle des paramêtres.
+
+
