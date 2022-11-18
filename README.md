@@ -115,5 +115,10 @@ On voit que le port UART de la Raspberry Pi s'appelle **_ttyAMA0_**.
 Lors de la réception d'une requête on va donc envoyer un ordre à la STM32 et attendre sa réponse :
 
 <a>https://github.com/Artpel1805/BusReseauESE/blob/38bcaade74b0e8bcc69c58af9c7d3fbd5ee3f309/API/uart.py#L6-L12<a>
+  
+Vous pouvez retrouver l'ensemble des requêtes UART: [uart](API/uart.py)
 
 ### [BONUS] Fast API
+
+  
+FAST API est un framework python permettant de faire du serveur comme Flask. Il propose cependant une meilleure documentation et la communauté est très active ce qui est un paramètre non-négligeable. Deplus il permet une gestion plus facile et automatisée de
