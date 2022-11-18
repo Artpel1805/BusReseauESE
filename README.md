@@ -38,3 +38,8 @@ HTTP est principalement caractérisé par **_les verbes_** qui permettent d'effe
 - POST pour créer de la donnée
 - DELETE pour supprimer de la donnée
 
+### Flask
+
+### Connection avec la STM32
+
+### [BONUS] Fast API
