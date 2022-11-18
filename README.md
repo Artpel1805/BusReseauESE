@@ -42,7 +42,7 @@ HTTP est principalement caractérisé par **_les verbes_** qui permettent d'effe
 - POST pour créer de la donnée
 - DELETE pour supprimer de la donnée
 
-### Flask
+### Configuratoin de la Raspberry
 
 Après avoir installé Raspberry Pi OS Lite 32 Bit: <a>https://www.raspberrypi.org/downloads/raspberry-pi-os/</a>
 
@@ -52,7 +52,23 @@ La Raspberry communique via **_ssh_**, un protocole de communication permetant d
 
 On peut chercher notre Raspberry sur le réseau avec la commande  `arp -a`
 
-On se connecte ensuite via la commande `ssh pi@<ip_adresse>`
+On se connecte ensuite via la commande  `ssh pi@<ip_adresse>`
+
+### Flask
+
+Comme nous l'avons le serveur appartient à la couche 7, c'est principalement un logiciel.
+
+Nous pouvons donc coder notre serveur en C, Ruby, Java, Dart...
+
+Nous choisissons d'utiliser Python car c'est un langage disposant de très bon framework serveur.
+
+On a maintenant accès à notre OS via le shell. Raspberry Pi OS est en fait une surcouche Linux. Nous pouvons donc installer python via le gestionnaire de paquet apt: `sudo apt install python3-pip`
+
+Flask est un framework python permettant de coder assez simplement des API REST.
+
+Nous devons donc installer donc Flask via le gestionnaire de paquet de Python pip.
+
+Une bonne pratique est de lister toutes les dépendances python dans un fichier. Ainsi quelqu'un récupérant le projet ne devra executer qu'une seule commande pour tout installer : <a>api/requirement.txt</a>
 
 ### Connection avec la STM32
 
