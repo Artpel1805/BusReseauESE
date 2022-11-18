@@ -11,27 +11,21 @@ Nous nous occuperons de la partie réseau, capteur et asservissement moteur.
 On pourrait très bien imaginer rajouter une UI pour communiquer avec notre serveur, ainsi qu'une vanne commandée par le moteur pour régler l'intensité du chauffage.
 
 
-## Capteur BMP280
-Les adresses I²C possibles pour ce composant: 1110110 (0X76) ou 1110111 (0x77) ca depend de la connection de SDO
-
-Le registre et la valeur permettant d'identifier ce composant: le registre ID  0xDO et sa valeur est 0x58.
-
-le registre et la valeur permettant de placer le composant en mode normal : control register et la valeur 11
-
-Le registres contenant l'étalonnage du composant: 0xF4
-
-Les registres contenant la température (ainsi que le format): 0xFA 0xFB 0xFC
-
-Les registres contenant la pression (ainsi que le format): 0xF7 0xF8 0xF9
-
-Les fonctions permettant le calcul de la température et de la pression compensées, en
-format entier 32 bits: 
--BMP280_S32_t  bmp280_compensate_T_int32(BMP280_S32_t adc_T)
--BMP280_U32_t  bmp280_compensate_P_int64(BMP280_S32_t adc_P)
+## Capteurs
 
 
-## Setup du STM32
 
-## Communication I²C 
+## Asservissement Moteur
 
+
+
+## Réseau
+
+Pour la partie Réseau nous utiliserons une Raspberry Pi. Celle-ci dispose d'une carte réseau et après une configuration nous la connectons sur un réseau local.
+
+Nous allons créer un serveur sur cette carte electronique. Plus précisement une API REST. Nous utiliserons le protocole de communication HTTP pour communiquer avec notre serveur.
+
+### HTTP
+Le protocole HTTP normalisé de couche 7 dans le modèle OSI. Il utilise un protocole TCP en couche 4.
+HTTP est principalement caractérisé par **_les verbes__** 
 
