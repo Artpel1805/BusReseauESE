@@ -12,7 +12,7 @@ async def get_temperatures():
     return temperatures
 
 @app.get("/temp/{x}", tags=["TEMPERATURE"])
-async def get_temperature(x: int = Path(None,title="The index of the temperature", lt=len(temperatures), ge=0-len(temperatures))):
+async def get_temperature(x: int = Path(None,title="The index of the temperature", lt=len(temperatures), ge=-len(temperatures))):
     return temperatures[x]
 
 @app.post("/temp", tags=["TEMPERATURE"])
@@ -22,7 +22,7 @@ async def add_temperature_mesure():
     return 
 
 @app.delete("/temp/{x}", tags=["TEMPERATURE"])
-async def delete_temperature(x: int = Path(None,title="The index of the temperature", lt=len(temperatures), ge=0-len(temperatures))):
+async def delete_temperature(x: int = Path(None,title="The index of the temperature", lt=len(temperatures), ge=-len(temperatures))):
     del temperatures[x]
     return
 
@@ -32,7 +32,7 @@ async def get_pressures():
     return pressures
 
 @app.get("/pressure/{x}", tags=["PRESSURE"])
-async def get_pressure(x: int = Path(None,title="The index of the pressure", lt=len(pressures), ge=0-len(pressures))):
+async def get_pressure(x: int = Path(None,title="The index of the pressure", lt=len(pressures), ge=-len(pressures))):
     return pressures[x]
 
 @app.post("/pressure", tags=["PRESSURE"])
@@ -42,7 +42,7 @@ async def add_pressure_mesure():
     return 
 
 @app.delete("/pressure/{x}", tags=["PRESSURE"])
-async def delete_pressure(x: int = Path(None,title="The index of the pressure", lt=len(pressures), ge=0-len(pressures))):
+async def delete_pressure(x: int = Path(None,title="The index of the pressure", lt=len(pressures), ge=-len(pressures))):
     del pressures[x]
     return
 
