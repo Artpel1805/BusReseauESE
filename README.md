@@ -55,7 +55,7 @@ Tout d'abord nous allons commencer par créer une structure pour envoyer notre m
 
 <a>https://github.com/Artpel1805/BusReseauESE/blob/fc92a518d5c38a0820adb6c871b40ebab13722cf/CUBEIDE/Core/Src/main.c#L257-L274</a>
 
-
+<a>https://github.com/Artpel1805/BusReseauESE/blob/5e10011cfe5361856f36e32c2dc6739d4ccfb791/CUBEIDE/Core/Src/main.c#L265-L268</a>
 ## Réseau
 
 ### Serveur
