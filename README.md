@@ -46,7 +46,7 @@ On recoit à la fin 0x58 ce qui correpond à la valeur attendu et  on utilise UA
 Pour cela on envoie l'adresse du registre à écrire 0xF4 suivi de la valeur des paramètres et pour cela on fait un déclage de bits et on verifie cela à la fin .
 
 <a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L58-L64</a>
-
+<a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L49-L51</a>
 ## Asservissement Moteur
 
 Les cartes STM32L476 sont équipées d'un contrôleur CAN intégré.Pour pouvoir les utiliser, il faut leur adjoindre un Tranceiver CAN.Le bus CAN pour piloter un module moteur pas-à-pas. Ce module s'alimente en +12V. La carte moteur tolére une vitesse CAN de 500kbit/s.
