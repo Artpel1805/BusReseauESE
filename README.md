@@ -120,5 +120,6 @@ Vous pouvez retrouver l'ensemble des requêtes UART: [uart](API/uart.py)
 
 ### [BONUS] Fast API
 
-  
-FAST API est un framework python permettant de faire du serveur comme Flask. Il propose cependant une meilleure documentation et la communauté est très active ce qui est un paramètre non-négligeable. Deplus il permet une gestion plus facile et automatisée de
+FAST API est un framework python permettant de faire du serveur comme Flask. Il propose cependant une meilleure documentation et la communauté est très active ce qui est un paramètre non-négligeable. Deplus il permet une gestion plus facile et automatisée de l'erreur et du contrôle des paramêtres.
+
+
