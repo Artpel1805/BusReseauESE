@@ -30,6 +30,8 @@ Nous allons créer un serveur sur cette carte electronique.
 Le serveur va nous permettre de manipuler de la donnée et d'executer des ordres via un protocole de communication sans fil.
 Plus précisement une API REST. Nous utiliserons le protocole de communication HTTP pour communiquer avec notre serveur.
 
+![img](assets/)
+
 ### HTTP
 Le protocole HTTP normalisé de couche 7 dans le modèle OSI. Il utilise un protocole TCP en couche 4.
 
