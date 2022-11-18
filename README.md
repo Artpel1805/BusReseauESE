@@ -14,14 +14,48 @@ On pourrait très bien imaginer rajouter une UI pour communiquer avec notre serv
 ![img](assets/Schemas_Global.png)
 
 
-## Capteurs
+## Capteurs BMP280
 
+Le BMP280 est un capteur de pression et température développé par Bosch , la première chose
+à faire c’est que nous allons bien lire la datasheet de ce capteur et extraire toute les informations
+qu’il nous faut :
+Les adresses I²C possibles pour ce composant: 1110110 (0X76) ou 1110111 (0x77) où le
+dernier bit sert à définir si on va faire une écriture ou lecture.
+Le registre et la valeur permettant d'identifier ce composant: le registre ID 0xB6.
+Le registre et la valeur permettant de placer le composant en mode normal: 0xF3 ‘’status’
+Les registres contenant l'étalonnage du composant: 0xF4, 0xF5
+Les registres contenant la température (ainsi que le format): 0xFA 0xFB 0xFC
+Les registres contenant la pression (ainsi que le format): 0xF7 0xF8 0xF9
+Les fonctions permettant le calcul de la température et de la pression compensées, en
+format entier 32 bits: 
 
+<a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L167</a>
+<a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L154</a>
 
+### Identification
+
+Pour pouvoir identifier le BMP280 il fallait envoyer par à l’adresse I²C du capteur, l’adresse du registre ID pour pouvoir recevoir le contenu de ce registre .
+
+<a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L37-L43</a>
+<a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L49-L51</a>
+
+On recoit à la fin 0x58 ce qui correpond à la valeur attendu et  on utilise UART pour vérifier si la communication I2C est bien passée.
+
+### Configuration du BMP280
+
+ Nous allons utiliser la configuration suivante: mode normal, Pressure oversampling x16, Temperature oversampling x2.
+Pour cela on envoie l'adresse du registre à écrire 0xF4 suivi de la valeur des paramètres et pour cela on fait un déclage de bits et on verifie cela à la fin .
+
+<a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L58-L64</a>
 ## Asservissement Moteur
 
+Les cartes STM32L476 sont équipées d'un contrôleur CAN intégré.Pour pouvoir les utiliser, il faut leur adjoindre un Tranceiver CAN.Le bus CAN pour piloter un module moteur pas-à-pas. Ce module s'alimente en +12V. La carte moteur tolére une vitesse CAN de 500kbit/s.
+Pour pouvoir utliser le bus Can on utilise deux primitives HAL HAL_StatusTypeDef HAL_CAN_Start (CAN_HandleTypeDef * hcan) pour pour activer le module CAN etHAL_StatusTypeDef HAL_CAN_AddTxMessage (CAN_HandleTypeDef * hcan, CAN_TxHeaderTypeDef * pHeader, uint8_t aData[], uint32_t * pTxMailbox) pour envoyer un message.
+Tout d'abord nous allons commencer par créer une structure pour envoyer notre message ID en standart . Et en choisisant d'envoyer 2 bits pour utilise la function Angle fournin par la DataSheet qui permet de choisir l'angle et le sens désiré . Puis nous référant la position atteinte comme position initiale pour pouvoir continuer de tourner .
 
+<a>https://github.com/Artpel1805/BusReseauESE/blob/fc92a518d5c38a0820adb6c871b40ebab13722cf/CUBEIDE/Core/Src/main.c#L257-L274</a>
 
+<a>https://github.com/Artpel1805/BusReseauESE/blob/5e10011cfe5361856f36e32c2dc6739d4ccfb791/CUBEIDE/Core/Src/main.c#L265-L268</a>
 ## Réseau
 
 ### Serveur
@@ -124,8 +158,15 @@ Vous pouvez retrouver l'ensemble des requêtes UART: [uart](API/uart.py)
 
 ### [BONUS] Fast API
 
+  > Avant d'utiliser et d'installer FastAPI il faut intaller Cargo `sudo apt install cargo`
+  
 FAST API est un framework python permettant de faire du serveur comme Flask. Il propose cependant une meilleure documentation et la communauté est très active ce qui est un paramètre non-négligeable. Deplus il permet une gestion plus facile et automatisée de l'erreur et du contrôle des paramêtres.
 
 Nous avons choisis ce framework pour le projet final deplus il propose un [swagger](https://swagger.io/tools/swagger-ui/) intégré ce qui rends l'envois de requête beaucoup plus simple et aggréable.
   
 ![img](assets/swagger.png)
+  Le principe est le même mais FastAPI va gérer automatiquement les erreurs sur le type des paramêtres (ici `int`) et nous pouvons ajouter des condtions, par exemple l'entier ne doit pas être plus grand que la taille du tableau et plus petit que l'index négatif maximal
+  
+  <a>https://github.com/Artpel1805/BusReseauESE/blob/c4bb8c6e2e8be94cfdf36a6e242e60eefef9d5f9/API/api.py#L14-L15</a>
+  
+ Vous pouvez retrouver le projet fastAPI: [FASTAPI](API/api.py)
