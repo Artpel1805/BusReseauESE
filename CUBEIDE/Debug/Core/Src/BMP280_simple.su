@@ -1,0 +1,8 @@
+../Core/Src/BMP280_simple.c:32:5:BMP280_check	24	static
+../Core/Src/BMP280_simple.c:58:5:BMP280_init	16	static
+../Core/Src/BMP280_simple.c:75:5:BMP280_Write_Reg	32	static
+../Core/Src/BMP280_simple.c:98:10:BMP280_Read_Reg	32	static
+../Core/Src/BMP280_simple.c:117:14:BMP280_get_temperature	16	static
+../Core/Src/BMP280_simple.c:135:5:BMP280_get_pressure	16	static
+../Core/Src/BMP280_simple.c:154:14:bmp280_compensate_T_int32	32	static
+../Core/Src/BMP280_simple.c:167:14:bmp280_compensate_P_int32	32	static
