@@ -16,6 +16,24 @@ On pourrait très bien imaginer rajouter une UI pour communiquer avec notre serv
 
 ## Capteurs
 
+### BMP280
+
+Le BMP280 est un capteur de pression et température développé par Bosch , la première chose
+à faire c’est que nous allons bien lire la datasheet de ce capteur et extraire toute les informations
+qu’il nous faut :
+Les adresses I²C possibles pour ce composant: 1110110 (0X76) ou 1110111 (0x77) où le
+dernier bit sert à définir si on va faire une écriture ou lecture.
+Le registre et la valeur permettant d'identifier ce composant: le registre ID 0xB6.
+Le registre et la valeur permettant de placer le composant en mode normal: 0xF3 ‘’status’
+Les registres contenant l'étalonnage du composant: 0xF4, 0xF5
+Les registres contenant la température (ainsi que le format): 0xFA 0xFB 0xFC
+Les registres contenant la pression (ainsi que le format): 0xF7 0xF8 0xF9
+Les fonctions permettant le calcul de la température et de la pression compensées, en
+format entier 32 bits: 
+
+<a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L167</a>
+<a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L154</a>
+
 
 
 ## Asservissement Moteur
