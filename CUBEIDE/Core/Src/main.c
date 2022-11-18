@@ -139,7 +139,6 @@ int isOk = 0;
 
 void command(char bufferTransfert[RxBuf_SIZE], uint8_t Size)
 {
-	//HAL_UART_Transmit(&huart2, RX_Pi_buffer, Size, 0xFFFF);
 	if (strncmp(bufferTransfert,"GET_T",strlen("GET_T"))==0)
 	{
 		TemperatureV=BMP280_get_temperature();
@@ -154,14 +153,8 @@ void command(char bufferTransfert[RxBuf_SIZE], uint8_t Size)
 	}
 	else if (strncmp(bufferTransfert,"SET_K",strlen("SET_K"))==0)
 	{
-		//printf("SET_K Received\r\n");
 		if (strncmp(bufferTransfert+strlen("SET_K"),"=",strlen("="))==0)
 		{
-			/*
-			 * permet de transformer une chaîne de caractères,
-			 * représentant une valeur entière, en une valeur numérique de type int.
-			 * Le terme d'atoi est un acronyme signifiant : ASCII to integer.
-			 */
 			K=atoi(bufferTransfert+strlen("SET_K")+strlen("=")); //
 		}
 		else
@@ -173,12 +166,10 @@ void command(char bufferTransfert[RxBuf_SIZE], uint8_t Size)
 	}
 	else if (strncmp(bufferTransfert,"GET_K",strlen("GET_K"))==0)
 	{
-		//printf("GET_K Received\r\n");
 		printf("K=%d.%d000\r\n",(int)(K/100),K%100);
 	}
 	else if (strncmp(bufferTransfert,"GET_A",strlen("GET_A"))==0)
 	{
-		//printf("GET_A Received\r\n");
 		printf("A=%d.%d000\r\n",(int)(A/1000),A%1000);
 	}
 	else
@@ -244,8 +235,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
    uint8_t Register[1] = {0xD0};
    uint8_t Receive[1];
-  // HAL_TIM_Base_Start_IT(&htim7);
-
    HAL_UARTEx_ReceiveToIdle_DMA(&huart3,RxBuf,RxBuf_SIZE);
    __HAL_DMA_DISABLE_IT(&hdma_usart3_rx,DMA_IT_HT);
 
@@ -273,9 +262,13 @@ int main(void)
    TxData[0]= 90;
    TxData[1]= 0;
 
+   HAL_CAN_AddTxMessage(&hcan1,&TxPosIni,TxData, &TxMailBox);
+   HAL_CAN_AddTxMessage(&hcan1,&TxHeader,TxData, &TxMailBox);
+   HAL_CAN_AddTxMessage(&hcan1,&TxPosIni,TxData, &TxMailBox);
+   HAL_CAN_AddTxMessage(&hcan1,&TxHeader,TxData, &TxMailBox);
 
 
-   /* Identification du BMP280 */
+   /*BMP280 */
 
    HAL_I2C_Master_Transmit(&hi2c1,ADD_BMP, Register ,1, HAL_MAX_DELAY);
    HAL_I2C_Master_Receive(&hi2c1,ADD_BMP, Receive,1,HAL_MAX_DELAY);
