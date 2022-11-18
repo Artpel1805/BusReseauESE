@@ -37,6 +37,7 @@ format entier 32 bits:
 Pour pouvoir identifier le BMP280 il fallait envoyer par à l’adresse I²C du capteur, l’adresse du registre ID pour pouvoir recevoir le contenu de ce registre .
 
 <a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L37-L43</a>
+<a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L49-L51</a>
 
 On recoit à la fin 0x58 ce qui correpond à la valeur attendu et  on utilise UART pour vérifier si la communication I2C est bien passée.
 
@@ -46,7 +47,6 @@ On recoit à la fin 0x58 ce qui correpond à la valeur attendu et  on utilise UA
 Pour cela on envoie l'adresse du registre à écrire 0xF4 suivi de la valeur des paramètres et pour cela on fait un déclage de bits et on verifie cela à la fin .
 
 <a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L58-L64</a>
-<a>https://github.com/Artpel1805/BusReseauESE/blob/30392f68e8331b5f60fbc16fe17755c1e7d9403b/CUBEIDE/Core/Src/BMP280_simple.c#L49-L51</a>
 ## Asservissement Moteur
 
 Les cartes STM32L476 sont équipées d'un contrôleur CAN intégré.Pour pouvoir les utiliser, il faut leur adjoindre un Tranceiver CAN.Le bus CAN pour piloter un module moteur pas-à-pas. Ce module s'alimente en +12V. La carte moteur tolére une vitesse CAN de 500kbit/s.
