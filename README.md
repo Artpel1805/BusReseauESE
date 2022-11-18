@@ -68,7 +68,7 @@ Flask est un framework python permettant de coder assez simplement des API REST.
 
 Nous devons donc installer donc Flask via le gestionnaire de paquet de Python pip.
 
-Une bonne pratique est de lister toutes les dépendances python dans un fichier. Ainsi quelqu'un récupérant le projet ne devra executer qu'une seule commande pour tout installer : <a>API/requirement.txt</a>
+Une bonne pratique est de lister toutes les dépendances python dans un fichier. Ainsi quelqu'un récupérant le projet ne devra executer qu'une seule commande pour tout installer : [requirement.txt]API/requirement.txt
 
 ### Connection avec la STM32
 
