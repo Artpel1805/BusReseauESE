@@ -132,3 +132,5 @@ Nous avons choisis ce framework pour le projet final deplus il propose un [swagg
   Le principe est le même mais FastAPI va gérer automatiquement les erreurs sur le type des paramêtres (ici `int`) et nous pouvons ajouter des condtions, par exemple l'entier ne doit pas être plus grand que la taille du tableau et plus petit que l'index négatif maximal
   
   <a>https://github.com/Artpel1805/BusReseauESE/blob/c4bb8c6e2e8be94cfdf36a6e242e60eefef9d5f9/API/api.py#L14-L15</a>
+  
+ Vous pouvez retrouver le projet fastAPI: [uart](API/api.py)
