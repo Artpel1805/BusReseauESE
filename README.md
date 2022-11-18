@@ -44,6 +44,8 @@ HTTP est principalement caractérisé par **_les verbes_** qui permettent d'effe
 
 ### Flask
 
+Après avoir installé Raspberry Pi OS : <a> https://www.raspberrypi.org/downloads/raspberry-pi-os/</a>
+
 ### Connection avec la STM32
 
 ### [BONUS] Fast API
