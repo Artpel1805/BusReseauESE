@@ -80,6 +80,8 @@ Pour construire une route avec Flask il faut lui indiquer :
 - Le/Les arguments et leur type (Body/Query/Path Parameter)
 - La logique
 
+<a>https://github.com/Artpel1805/BusReseauESE/blob/5573b0998c37098095fd06447441d778647bf6d2/API/flask_api.py#L20</a>
+
 ### Connection avec la STM32
 
 ### [BONUS] Fast API
