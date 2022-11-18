@@ -84,6 +84,9 @@ Pour construire une route avec Flask il faut lui indiquer :
 
 Par exemple ici on voit que le path est "/temp", qu'il y a un Path Parameter "x" et que la requête accepte les verbes POST et GET
 
+Lorsque le serveur reçoit cette instruction il va alors effectuer la fonction ci-dessous.
+
+<a>https://github.com/Artpel1805/BusReseauESE/blob/4fdf398de2d8c7afaafab55f690ca8cb664cafed/API/flask_api.py#L11-L18</a>
 
 ### Connection avec la STM32
 
