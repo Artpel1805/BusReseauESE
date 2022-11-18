@@ -84,7 +84,7 @@ Pour construire une route avec Flask il faut lui indiquer :
 
 Par exemple ici on voit que le path est "/temp", qu'il y a un Path Parameter "x" et que la requête accepte les verbes POST et GET
 
-Lorsque le serveur reçoit cette instruction il va alors effectuer la fonction ci-dessous.
+Lorsque le serveur reçoit une requête HTTP contenant ces informations il va alors effectuer la fonction ci-dessous.
 
 <a>https://github.com/Artpel1805/BusReseauESE/blob/e33c806981fa3cc1ed17d72aeab58bacde361ed7/API/flask_api.py#L21-L27</a>
 
@@ -92,6 +92,17 @@ Le serveur nous renvois ensuite une réponse constituée de :
 - La Data
 - Un code de Status : [Status Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
+La Réponse est aussi normalisée, elle est au format JSON, les Satuts code sont aussi noramlisés.
+
+
 ### Connection avec la STM32
+
+Nous avons vu comment communiquer avec notre Raspberry Pi grâce à Flask et l'envois de requêtes HTTP.
+
+Maintenant notre Raspberry Pi doit communiquer avec notre STM32 lors de la réception de requêtes HTTP.
+
+Nous choisissons de communiquer via un **_BUS UART_**.
+
+La Raspberry Pi va donc envoyer des ordres ("Chaines de caractère") à notre STM lors de la reception de commande HTTP et la STM va ainsi pouvoir nous répondre en UART en nous communiquant les données du capteurs ou du moteur. Ensuite nous allons pouvoir les renvoyer via HTTP à l'auteur de la requête.
 
 ### [BONUS] Fast API
