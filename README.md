@@ -42,7 +42,7 @@ HTTP est principalement caractérisé par **_les verbes_** qui permettent d'effe
 - POST pour créer de la donnée
 - DELETE pour supprimer de la donnée
 
-### Configuratoin de la Raspberry
+### Configuration de la Raspberry
 
 Après avoir installé Raspberry Pi OS Lite 32 Bit: <a>https://www.raspberrypi.org/downloads/raspberry-pi-os/</a>
 
@@ -69,6 +69,8 @@ Flask est un framework python permettant de coder assez simplement des API REST.
 Nous devons donc installer donc Flask via le gestionnaire de paquet de Python pip.
 
 Une bonne pratique est de lister toutes les dépendances python dans un fichier. Ainsi quelqu'un récupérant le projet ne devra executer qu'une seule commande pour tout installer : [requirement.txt](API/requirement.txt)
+
+Il ne nous reste plus qu'a executer la commande `python3 -m pip install -r requirement.txt`
 
 ### Connection avec la STM32
 
